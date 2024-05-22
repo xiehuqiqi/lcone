@@ -7,9 +7,15 @@ fn greet(name: &str) -> String {
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
+mod systemtray;
+
 fn main() {
+    let context = tauri::generate_context!();
     tauri::Builder::default()
+        .menu(tauri::Menu::os_default(&context.package_info().name))
+        .system_tray(tauri::SystemTray::default())  // 将 `tauri.conf.json` 上配置的图标添加到系统托盘
+        .on_system_tray_event(systemtray::handler)  // 注册系统托盘事件处理程序
         .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
+        .run(context)
         .expect("error while running tauri application");
 }

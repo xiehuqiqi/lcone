@@ -17,12 +17,39 @@
         "open": true
       }
     },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
     "windows": [
       {
         "label": "main",
+        "url": "/",
+        "fileDropEnabled": true,
+        "center": true,
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 700,
+        "minWidth": 800,
+        "minHeight": 600,
+        "maxWidth": 1366,
+        "maxHeight": 768,
+        "resizable": true,
         "title": "lcone",
-        "width": 800,
-        "height": 600
+        "fullscreen": false,
+        "focus": true,
+        "transparent": false,
+        "maximizable": true,
+        "visible": true,
+        "decorations": false,
+        "alwaysOnTop": false,
+        "contentProtected": false,
+        "skipTaskbar": false,
+        "theme": "Light",
+        "titleBarStyle": "Visible",
+        "hiddenTitle": false,
+        "acceptFirstMouse": false
       }
     ],
     "security": {
@@ -37,7 +64,9 @@
         "icons/128x128.png",
         "icons/128x128@2x.png",
         "icons/icon.icns",
-        "icons/icon.ico"
+        "icons/icon.ico",
+        "icons/icon.png",
+        "icons/StoreLogo.png"
       ],
       "windows": {
         "allowDowngrades": true,
