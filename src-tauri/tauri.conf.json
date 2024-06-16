@@ -1,0 +1,149 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "lcone-v1",
+    "version": "../package.json"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": true, 
+        "create": true,
+        "center": true,
+        "requestUserAttention": true,
+        "setResizable": true,
+        "setTitle": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "show": true,
+        "hide": true,
+        "close": true,
+        "setDecorations": true,
+        "setAlwaysOnTop": true,
+        "setContentProtected": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setPosition": true,
+        "setFullscreen": true,
+        "setFocus": true,
+        "setIcon": true,
+        "setSkipTaskbar": true,
+        "setCursorGrab": true,
+        "setCursorVisible": true,
+        "setCursorIcon": true,
+        "setCursorPosition": true,
+        "setIgnoreCursorEvents": true,
+        "startDragging": true,
+        "print": true
+      }
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true,
+      "title": "lcone"
+    },
+    "windows": [
+      {
+        "label": "main",
+        "url": "/",
+        "fileDropEnabled": true,
+        "center": true,
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 700,
+        "minWidth": 800,
+        "minHeight": 600,
+        "maxWidth": 1366,
+        "maxHeight": 768,
+        "resizable": true,
+        "title": "lcone",
+        "fullscreen": false,
+        "focus": true,
+        "transparent": false,
+        "maximizable": true,
+        "visible": true,
+        "decorations": false,
+        "alwaysOnTop": false,
+        "contentProtected": false,
+        "skipTaskbar": false,
+        "theme": "Light",
+        "titleBarStyle": "Visible",
+        "hiddenTitle": false,
+        "acceptFirstMouse": false
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "wen.suwenmao.lcone",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico",
+        "icons/icon.png",
+        "icons/StoreLogo.png"
+      ],
+      "windows": {
+        "allowDowngrades": true,
+        "certificateThumbprint": null,
+        "digestAlgorithm": null,
+        "nsis": {
+          "license": "xxxx",
+          "installerIcon": "icons/128x128.png",
+          "installMode": "both",
+          "languages": [
+            "zh-CN",
+            "zh-TW",
+            "en-US",
+            "ja-JP"
+          ],
+          "displayLanguageSelector": false
+        },
+        "timestampUrl": null,
+        "tsp": false,
+        "webviewFixedRuntimePath": null,
+        "webviewInstallMode": {
+          "silent": true,
+          "type": "offlineInstaller"
+        },
+        "wix": {
+          "language": [
+            "zh-CN",
+            "zh-TW",
+            "en-US",
+            "ja-JP"
+          ]
+        }
+      }
+    },
+    "updater": {
+      "active": false,
+      "dialog": true,
+      "endpoints": [],
+      "pubkey": "",
+      "windows": {
+        "installMode": "basicUi",
+        "installerArgs": []
+      }
+    }
+  }
+}
